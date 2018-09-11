@@ -5,5 +5,60 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  font: 16px / 1 sans-serif;
+  font: 25px / 1 "Gamja Flower", cursive;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+header,
+h2 {
+  margin: 0;
+}
+
+button {
+  border: 2px solid black;
+  padding: 0 20px;
+  margin: 0 10px;
+  height: 1.5rem;
+  font-family: "Gamja Flower", cursive;
+  font-size: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 150px;
+}
+
+input {
+  border: 2px solid black;
+  height: 1.5rem;
+  margin-left: 7px;
+}
+
+p.score {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+.update-teams {
+  display: flex;
+  justify-content: space-around;
+}
+
+.team-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
 }
