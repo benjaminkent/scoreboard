@@ -34,7 +34,7 @@ button {
 
 main {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding-bottom: 150px;
 }
 
@@ -42,6 +42,11 @@ input {
   border: 2px solid black;
   height: 1.5rem;
   margin-left: 7px;
+}
+
+.vs {
+  font-size: 4rem;
+  padding: 0 200px;
 }
 
 p.score {
