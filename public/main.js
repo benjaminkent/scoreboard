@@ -1,7 +1,6 @@
 let score = 0;
 
 const addPoint = event => {
-  console.log("does this need to be here??");
   score += 1;
   let message = `${score}`;
   const teamOneScore = document.querySelector(".team-1-score");
@@ -9,7 +8,6 @@ const addPoint = event => {
 };
 
 const subtractPoint = event => {
-  console.log("does this need to be here??");
   score -= 1;
   let message = `${score}`;
   const teamOneScore = document.querySelector(".team-1-score");
@@ -19,7 +17,6 @@ const subtractPoint = event => {
 let scoreTeamTwo = 0;
 
 const teamTwoAddPoint = event => {
-  console.log("does this need to be here??");
   scoreTeamTwo += 1;
   let message = `${scoreTeamTwo}`;
   const teamTwoScore = document.querySelector(".team-2-score");
@@ -27,7 +24,6 @@ const teamTwoAddPoint = event => {
 };
 
 const teamTwoSubtractPoint = () => {
-  console.log("does this need to be here??");
   scoreTeamTwo -= 1;
   let message = `${scoreTeamTwo}`;
   const teamTwoScore = document.querySelector(".team-2-score");
@@ -37,7 +33,6 @@ const teamTwoSubtractPoint = () => {
 const chooseTeamOneName = () => {
   let updateTeamOneName = document.querySelector(".update-team-1-name");
   let teamOneName = document.querySelector(".team-1");
-  console.log("update team one name");
   let message = `${updateTeamOneName.value}`;
   teamOneName.textContent = message;
 };
@@ -45,7 +40,6 @@ const chooseTeamOneName = () => {
 const chooseTeamTwoName = () => {
   let updateTeamTwoName = document.querySelector(".update-team-2-name");
   let teamTwoName = document.querySelector(".team-2");
-  console.log("update team two name");
   let message = `${updateTeamTwoName.value}`;
   teamTwoName.textContent = message;
 };
