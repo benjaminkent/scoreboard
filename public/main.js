@@ -24,12 +24,28 @@ const teamTwoAddPoint = event => {
   teamTwoScore.textContent = message;
 };
 
-teamTwoSubtractPoint = () => {
+const teamTwoSubtractPoint = () => {
   console.log("does this need to be here??");
   score -= 1;
   let message = `${score}`;
   const teamTwoScore = document.querySelector(".team-2-score");
   teamTwoScore.textContent = message;
+};
+
+const chooseTeamOneName = () => {
+  let updateTeamOneName = document.querySelector(".update-team-1-name");
+  let teamOneName = document.querySelector(".team-1");
+  console.log("update team one name");
+  let message = `${updateTeamOneName.value}`;
+  teamOneName.textContent = message;
+};
+
+const chooseTeamTwoName = () => {
+  let updateTeamTwoName = document.querySelector(".update-team-2-name");
+  let teamTwoName = document.querySelector(".team-2");
+  console.log("update team two name");
+  let message = `${updateTeamTwoName.value}`;
+  teamTwoName.textContent = message;
 };
 
 const main = () => {
@@ -44,6 +60,12 @@ const main = () => {
 
   const teamTwoSubtract = document.querySelector(".team-2-subtract");
   teamTwoSubtract.addEventListener("click", teamTwoSubtractPoint);
+
+  const teamOneUpdateButton = document.querySelector(".team-1-update-button");
+  teamOneUpdateButton.addEventListener("click", chooseTeamOneName);
+
+  const teamTwoUpdateButton = document.querySelector(".team-2-update-button");
+  teamTwoUpdateButton.addEventListener("click", chooseTeamTwoName);
 };
 
 document.addEventListener("DOMContentLoaded", main);
