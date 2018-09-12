@@ -16,18 +16,20 @@ const subtractPoint = event => {
   teamOneScore.textContent = message;
 };
 
+let scoreTeamTwo = 0;
+
 const teamTwoAddPoint = event => {
   console.log("does this need to be here??");
-  score += 1;
-  let message = `${score}`;
+  scoreTeamTwo += 1;
+  let message = `${scoreTeamTwo}`;
   const teamTwoScore = document.querySelector(".team-2-score");
   teamTwoScore.textContent = message;
 };
 
 const teamTwoSubtractPoint = () => {
   console.log("does this need to be here??");
-  score -= 1;
-  let message = `${score}`;
+  scoreTeamTwo -= 1;
+  let message = `${scoreTeamTwo}`;
   const teamTwoScore = document.querySelector(".team-2-score");
   teamTwoScore.textContent = message;
 };
