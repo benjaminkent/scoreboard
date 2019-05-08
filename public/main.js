@@ -1,47 +1,51 @@
 let score = 0
-
-const addPoint = (event) => {
-  score += 1
-  let message = `${score}`
-  const teamOneScore = document.querySelector('.team-1-score')
-  teamOneScore.textContent = message
-}
-
-const subtractPoint = (event) => {
-  score -= 1
-  let message = `${score}`
-  const teamOneScore = document.querySelector('.team-1-score')
-  teamOneScore.textContent = message
-}
-
 let scoreTeamTwo = 0
 
-const teamTwoAddPoint = (event) => {
+const addPoint = () => {
+  score += 1
+  const teamOneScore = document.querySelector('.team-1-score')
+  teamOneScore.textContent = score
+}
+
+const subtractPoint = () => {
+  if (score <= 0) { return }
+  score -= 1
+  const teamOneScore = document.querySelector('.team-1-score')
+  teamOneScore.textContent = score
+}
+
+const teamTwoAddPoint = () => {
   scoreTeamTwo += 1
-  let message = `${scoreTeamTwo}`
   const teamTwoScore = document.querySelector('.team-2-score')
-  teamTwoScore.textContent = message
+  teamTwoScore.textContent = scoreTeamTwo
 }
 
 const teamTwoSubtractPoint = () => {
+  if (scoreTeamTwo <= 0) { return }
   scoreTeamTwo -= 1
-  let message = `${scoreTeamTwo}`
   const teamTwoScore = document.querySelector('.team-2-score')
-  teamTwoScore.textContent = message
+  teamTwoScore.textContent = scoreTeamTwo
 }
 
 const chooseTeamOneName = () => {
-  let updateTeamOneName = document.querySelector('.update-team-1-name')
   let teamOneName = document.querySelector('.team-1')
-  let message = `${updateTeamOneName.value}`
-  teamOneName.textContent = message
+  let updateTeamOneName = document.querySelector('.update-team-1-name')
+  teamOneName.textContent = updateTeamOneName.value
 }
 
 const chooseTeamTwoName = () => {
-  let updateTeamTwoName = document.querySelector('.update-team-2-name')
   let teamTwoName = document.querySelector('.team-2')
-  let message = `${updateTeamTwoName.value}`
-  teamTwoName.textContent = message
+  let updateTeamTwoName = document.querySelector('.update-team-2-name')
+  teamTwoName.textContent = updateTeamTwoName.value
+}
+
+const clearScore = () => {
+  score = 0
+  scoreTeamTwo = 0
+  let teamOneScore = document.querySelector('.team-1-score')
+  let teamTwoScore = document.querySelector('.team-2-score')
+  teamOneScore.textContent = score
+  teamTwoScore.textContent = scoreTeamTwo
 }
 
 const main = () => {
@@ -62,6 +66,9 @@ const main = () => {
 
   const teamTwoUpdateButton = document.querySelector('.team-2-update-button')
   teamTwoUpdateButton.addEventListener('click', chooseTeamTwoName)
+
+  const resetScore = document.querySelector('.reset')
+  resetScore.addEventListener('click', clearScore)
 }
 
 document.addEventListener('DOMContentLoaded', main)

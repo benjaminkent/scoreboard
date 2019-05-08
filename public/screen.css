@@ -57,6 +57,10 @@ p.score {
   font-weight: bold;
 }
 
+.reset {
+  margin: 0 auto;
+}
+
 .update-teams {
   display: flex;
   justify-content: space-around;
